@@ -61,6 +61,8 @@ p {
 .card-img {
     /* background-image: url('./src/assets/image 12.png');
     background-size: cover; */
+    /* position: relative;
+    z-index: 1; */
     width: 176px;
     height: 235px;
 
@@ -91,10 +93,10 @@ p {
     font-weight: bold;
 }
 
-/* .card {
-    display: flex; 
-    flex-direction: column;
-} */
+.card {
+    width: 250px;
+    position: relative;
+}
 
 .cards-list {
     display: flex;
@@ -105,14 +107,15 @@ p {
     text-overflow: ellipsis;
 }
 
-/* .grid-main-div {
-    display: flex;
+.card-badge {
+    position: absolute;
+    top: 58px;
+    left:46px;
+    z-index: 2;
+
+    background-color: white;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: bold;
 }
 
-.grid-img22 {
-    margin-top: 144.81px;
-}
-
-.grid-img23 {
-    margin-top: 103.23px;
-} */

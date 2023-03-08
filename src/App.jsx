@@ -12,13 +12,10 @@ export default function App() {
   const cardsArray = cardsData.map((oneCardData) => {
     return <Card 
               key={oneCardData.id}
-              img={oneCardData.coverImg}
               star_img={star}
-              rating={oneCardData.stats.rating}
-              reviewCount={oneCardData.stats.reviewCount}
-              country={oneCardData.location}
-              title={oneCardData.title}
-              price={oneCardData.price}
+              
+              {...oneCardData}
+              // propsObj = {oneCardData}
             />
   })
   return (
@@ -32,3 +29,11 @@ export default function App() {
   )
 }
 
+              // img={oneCardData.coverImg}
+              // star_img={star}
+              // rating={oneCardData.stats.rating}
+              // reviewCount={oneCardData.stats.reviewCount}
+              // country={oneCardData.location}
+              // title={oneCardData.title}
+              // price={oneCardData.price}
+              // openSpots={oneCardData.openSpots}

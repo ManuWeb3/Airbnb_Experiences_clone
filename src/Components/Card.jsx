@@ -3,15 +3,30 @@ import React from 'react'
 import '../../styles.css'
 
 export default function Card(props) {
-    //console.log(props)
+    //console.log(props.openSpots)
+    let badgeText                   // default value is undefined (falsy)
+    if (props.openSpots === 0) {
+        badgeText = "SOLD OUT"      // a truthy value
+    }
+    else if (props.location === "Online") {
+        badgeText = "ONLINE"        // a truthy value
+    }
+
     return (
         <div className='card'>
-            <img src={props.img} className='card-img'/>
+
+            {
+                badgeText != undefined 
+                && 
+                <div className='card-badge'>{badgeText}</div>
+            }
+
+            <img src={props.coverImg} className='card-img'/>
             <div>
                 <img src={props.star_img} className='rating' />
                 <span>
-                    <span className='bold'>{props.rating}</span>
-                    ({props.reviewCount}) •{props.country}
+                    <span className='bold'>{props.stats.rating}</span>
+                    ({props.stats.reviewCount}) •{props.location}
                 </span>
             </div>
             <p className='card--title'>{props.title}</p>
@@ -20,16 +35,3 @@ export default function Card(props) {
     )
 }
 
-// <>
-        //     <div className='card-img1'>
-        //         <img src={soldOut} className='status-logo'/>
-        //     </div>
-        //     <img src={rating1} className='rating-1'/>
-        //     <span>
-        //         <span className='bold'>5.0</span> (6) USA
-        //     </span>
-        //     <p>Life Lessons with Katie Zaferes</p>
-        //     <p>
-        //         <span className="bold">From $136</span> / person
-        //     </p>
-        // </>
