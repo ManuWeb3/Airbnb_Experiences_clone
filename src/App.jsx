@@ -5,6 +5,7 @@ import Hero from './Components/Hero'
 import Card from './Components/Card'
 import cardsData from '../data'
 
+
 // import Zaferes from './assets/image 12.png'
 import star from './assets/star.png'
 
