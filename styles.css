@@ -58,9 +58,9 @@ p {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.card-img1 {
-    background-image: url('./src/assets/image\ 12.png');
-    background-size: cover;
+.card-img {
+    /* background-image: url('./src/assets/image 12.png');
+    background-size: cover; */
     width: 176px;
     height: 235px;
 
@@ -78,9 +78,9 @@ p {
     margin-top: 6px;
     margin-left: 6px;
 }
-.rating-1 {
+.rating {
     margin-left: 37px;
-    width: 10px;
+    width: 12px;
 }
 
 .rating-desc {
@@ -89,6 +89,20 @@ p {
 
 .bold {
     font-weight: bold;
+}
+
+/* .card {
+    display: flex; 
+    flex-direction: column;
+} */
+
+.cards-list {
+    display: flex;
+}
+
+.card--title {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* .grid-main-div {

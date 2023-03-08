@@ -3,13 +3,32 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Card from './Components/Card'
+import cardsData from '../data'
+
+// import Zaferes from './assets/image 12.png'
+import star from './assets/star.png'
 
 export default function App() {
+  const cardsArray = cardsData.map((oneCardData) => {
+    return <Card 
+              key={oneCardData.id}
+              img={oneCardData.coverImg}
+              star_img={star}
+              rating={oneCardData.stats.rating}
+              reviewCount={oneCardData.stats.reviewCount}
+              country={oneCardData.location}
+              title={oneCardData.title}
+              price={oneCardData.price}
+            />
+  })
   return (
       <div>
         <Navbar />
         <Hero />
-        <Card />
+        <section className='cards-list'>
+          {cardsArray}
+        </section>
       </div>
   )
 }
+
